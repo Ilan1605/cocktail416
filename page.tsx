@@ -211,7 +211,7 @@ export default function Cocktail416Page() {
             <span>Bar à cocktails mobile</span>
           </div>
           <h1 className="hero-title">
-            <span className="title-line">L&apos;art du cocktail</span>
+            <span className="title-line">L'art du cocktail</span>
             <span className="title-line accent">à votre événement</span>
           </h1>
           <p className="hero-subtitle">
@@ -324,7 +324,7 @@ export default function Cocktail416Page() {
           <div className="about-grid">
             <div className="about-content">
               <span className="section-tag">À propos</span>
-              <h2 className="section-title">L&apos;excellence genevoise</h2>
+              <h2 className="section-title">L'excellence genevoise</h2>
               <p>
                 Basés à Genève, nous apportons l&apos;art du cocktail directement à vos événements dans toute la région lémanique et au-delà.
               </p>
@@ -530,7 +530,7 @@ export default function Cocktail416Page() {
                 <span className="logo-text">COCKTAIL</span>
                 <span className="logo-number">416</span>
               </div>
-              <p>L&apos;art du cocktail à votre service. Bar mobile pour tous vos événements en Suisse romande.</p>
+              <p>L'art du cocktail à votre service. Bar mobile pour tous vos événements en Suisse romande.</p>
             </div>
             
             <div className="footer-links">
