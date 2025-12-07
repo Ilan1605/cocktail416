@@ -333,7 +333,7 @@ export default function Cocktail416Page() {
               </p>
             </div>
             <div className="about-image">
-              <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80" alt="Barman professionnel préparant un cocktail" />
+              <img src="/cocktail-about.jpg" alt="Cocktail signature Cocktail 416" />
               <div className="about-image-accent" />
             </div>
           </div>
