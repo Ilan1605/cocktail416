@@ -1050,3 +1050,77 @@ html, body {
   }
 }
 
+/* ============================================
+   CARROUSEL CARTE AUTO-SCROLL
+   ============================================ */
+
+.carte-carousel-wrapper {
+  overflow: hidden;
+  margin: 3rem -2rem;
+  padding: 2rem 0;
+}
+
+.carte-carousel {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scrollCarousel 60s linear infinite;
+}
+
+.carte-carousel:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.carte-image-card {
+  flex-shrink: 0;
+  width: 300px;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.carte-image-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 60px rgba(201, 169, 98, 0.3);
+}
+
+.carte-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  transition: transform var(--transition-slow);
+}
+
+.carte-image-card:hover img {
+  transform: scale(1.1);
+}
+
+.carte-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.carte-btn {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .carte-image-card {
+    width: 250px;
+    height: 330px;
+  }
+}
+

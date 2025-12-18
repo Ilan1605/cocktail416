@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Wine, Users, Calendar, MapPin, Clock, Sparkles, ChevronDown, Send, Phone, Mail, Instagram } from 'lucide-react';
+import { Wine, Users, Calendar, MapPin, Clock, Sparkles, ChevronDown, Send, Phone, Mail } from 'lucide-react';
 
 // Images de cocktails (URLs d'images libres de droits)
 const cocktailImages = [
@@ -27,63 +27,17 @@ const eventTypes = [
 
 const cocktailOptions = ["100", "200", "300", "400", "500", "500+"];
 
-// Menus de cocktails
-const cocktailMenus = [
-  {
-    name: "Les Classiques Revisités",
-    description: "Les intemporels sublimés par notre touche signature",
-    cocktails: [
-      { name: "Old Fashioned Fumé", ingredients: "Bourbon, bitters, sirop d'érable, fumée de bois" },
-      { name: "Negroni Épicé", ingredients: "Gin, Campari, vermouth rouge, poivre de Sichuan" },
-      { name: "Martini Poire & Romarin", ingredients: "Vodka, liqueur de poire, romarin frais" },
-      { name: "Manhattan Noir", ingredients: "Rye whiskey, vermouth, cerise amarena" },
-      { name: "Mojito Basilic", ingredients: "Rhum blanc, citron vert, basilic frais, sucre de canne" },
-    ]
-  },
-  {
-    name: "Délices Tropicaux",
-    description: "Évasion garantie avec nos créations exotiques",
-    cocktails: [
-      { name: "Passion Mango Fizz", ingredients: "Rhum, mangue, fruit de la passion, prosecco" },
-      { name: "Coco Lychee Dream", ingredients: "Vodka, lait de coco, litchi, citron vert" },
-      { name: "Ananas Gingembre Sour", ingredients: "Gin, ananas frais, gingembre, blanc d'œuf" },
-      { name: "Punch des Îles", ingredients: "Rhum ambré, jus tropicaux, grenadine, épices" },
-      { name: "Sunset Papaya", ingredients: "Tequila, papaye, orange sanguine, agave" },
-    ]
-  },
-  {
-    name: "Élégance Française",
-    description: "Le raffinement à la française dans chaque gorgée",
-    cocktails: [
-      { name: "French 75 Royal", ingredients: "Cognac, champagne, citron, sucre" },
-      { name: "Rose de Provence", ingredients: "Gin, liqueur de rose, champagne rosé" },
-      { name: "Cognac Vanille", ingredients: "Cognac XO, vanille de Madagascar, miel" },
-      { name: "Lavande Fizz", ingredients: "Vodka, sirop de lavande, citron, soda" },
-      { name: "Cassis Impérial", ingredients: "Champagne, crème de cassis, zeste de citron" },
-    ]
-  },
-  {
-    name: "Saveurs d'Orient",
-    description: "Un voyage sensoriel aux accents orientaux",
-    cocktails: [
-      { name: "Jasmin Martini", ingredients: "Gin, thé jasmin infusé, liqueur de fleur de sureau" },
-      { name: "Yuzu Ginger Spritz", ingredients: "Saké, yuzu, gingembre, eau pétillante" },
-      { name: "Cardamome Sour", ingredients: "Whisky, cardamome, citron, sirop d'orgeat" },
-      { name: "Saké Passion", ingredients: "Saké, fruit de la passion, lime" },
-      { name: "Rose Persane", ingredients: "Vodka, eau de rose, grenade, pistache" },
-    ]
-  },
-  {
-    name: "Signatures 416",
-    description: "Nos créations exclusives, l'âme de Cocktail 416",
-    cocktails: [
-      { name: "Léman Sunset", ingredients: "Gin suisse, Génépi, citron, tonic artisanal" },
-      { name: "Alpes Sour", ingredients: "Whisky, sirop de sapin, citron, blanc d'œuf" },
-      { name: "Genève 416", ingredients: "Vodka, absinthe, concombre, menthe fraîche" },
-      { name: "Mont Blanc", ingredients: "Rhum blanc, crème de marron, espresso, crème" },
-      { name: "Jet d'Eau Fizz", ingredients: "Champagne, liqueur de violette, citron, bulles" },
-    ]
-  },
+// Images pour le carrousel de la carte (sans la photo du bar)
+const carteImages = [
+  'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80',
+  'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=80',
+  'https://images.unsplash.com/photo-1536935338788-846bb9981813?w=600&q=80',
+  'https://images.unsplash.com/photo-1560963689-b5682b6440f8?w=600&q=80',
+  'https://images.unsplash.com/photo-1587223962930-cb7f31384c19?w=600&q=80',
+  'https://images.unsplash.com/photo-1609345265499-2133bbeb6ce5?w=600&q=80',
+  'https://images.unsplash.com/photo-1541546006121-5c3bc5e8c7b9?w=600&q=80',
+  'https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80',
+  'https://images.unsplash.com/photo-1497534446932-c925b458314e?w=600&q=80',
 ];
 
 export default function Cocktail416Page() {
@@ -104,6 +58,7 @@ export default function Cocktail416Page() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  
 
   // Animation du carousel
   useEffect(() => {
@@ -171,6 +126,7 @@ export default function Cocktail416Page() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+
   return (
     <div className="cocktail-page">
       {/* Navigation */}
@@ -208,7 +164,7 @@ export default function Cocktail416Page() {
         <div className="hero-content">
           <div className="hero-badge">
             <Sparkles className="w-4 h-4" />
-            <span>Bar à cocktails mobile</span>
+            <span>Bar à cocktails événementiel</span>
           </div>
           <h1 className="hero-title">
             <span className="title-line">L&apos;art du cocktail</span>
@@ -293,27 +249,28 @@ export default function Cocktail416Page() {
             <span className="section-tag">Notre carte</span>
             <h2 className="section-title">Des créations d&apos;exception</h2>
             <p className="section-description">
-              Découvrez nos 5 univers gustatifs, chacun composé de 5 cocktails signature soigneusement élaborés. Vous pouvez également personnaliser votre sélection ou nous proposer vos propres créations.
+              Découvrez nos cocktails signature soigneusement élaborés par nos mixologues. Classiques revisités, créations originales ou cocktails sur mesure selon vos envies.
             </p>
           </div>
-          <div className="menus-grid">
-            {cocktailMenus.map((menu, menuIndex) => (
-              <div key={menuIndex} className="menu-card">
-                <div className="menu-header">
-                  <span className="menu-number">0{menuIndex + 1}</span>
-                  <h3 className="menu-name">{menu.name}</h3>
-                  <p className="menu-description">{menu.description}</p>
+          
+          {/* Carrousel auto-scroll infini */}
+          <div className="carte-carousel-wrapper">
+            <div className="carte-carousel">
+              {/* Triple les images pour effet infini */}
+              {[...carteImages, ...carteImages, ...carteImages].map((img, index) => (
+                <div key={index} className="carte-image-card">
+                  <img src={img} alt={`Cocktail ${(index % carteImages.length) + 1}`} />
                 </div>
-                <ul className="cocktails-list">
-                  {menu.cocktails.map((cocktail, cocktailIndex) => (
-                    <li key={cocktailIndex} className="cocktail-item">
-                      <div className="cocktail-name">{cocktail.name}</div>
-                      <div className="cocktail-ingredients">{cocktail.ingredients}</div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          {/* Bouton pour voir la carte PDF */}
+          <div className="carte-cta">
+            <a href="/carte.pdf" target="_blank" rel="noopener noreferrer" className="btn-primary carte-btn">
+              <Wine className="w-5 h-5" />
+              <span>Découvrir notre carte complète</span>
+            </a>
           </div>
         </div>
       </section>
@@ -348,13 +305,13 @@ export default function Cocktail416Page() {
               <span className="section-tag">Devis gratuit</span>
               <h2 className="section-title">Planifions votre événement</h2>
               <p>
-                Remplissez ce formulaire et recevez un devis personnalisé sous 24h. Notre équipe vous contactera pour affiner les détails.
+                Remplissez ce formulaire et recevez un devis personnalisé sous 24h (jours ouvrables). Notre équipe vous contactera pour affiner les détails.
               </p>
               
               <div className="devis-features">
                 <div className="feature">
                   <div className="feature-icon">✓</div>
-                  <span>Réponse sous 24h</span>
+                  <span>Réponse sous 24h (jours ouvrables)</span>
                 </div>
                 <div className="feature">
                   <div className="feature-icon">✓</div>
@@ -542,17 +499,13 @@ export default function Cocktail416Page() {
             
             <div className="footer-contact">
               <h4>Contact</h4>
-              <a href="tel:+41000000000">
+              <a href="tel:+41783368860">
                 <Phone className="w-4 h-4" />
-                <span>+41 00 000 00 00</span>
+                <span>+41 78 336 88 60</span>
               </a>
               <a href="mailto:contact@cocktail416.com">
                 <Mail className="w-4 h-4" />
                 <span>contact@cocktail416.com</span>
-              </a>
-              <a href="https://instagram.com/cocktail416" target="_blank" rel="noopener noreferrer">
-                <Instagram className="w-4 h-4" />
-                <span>@cocktail416</span>
               </a>
             </div>
 
