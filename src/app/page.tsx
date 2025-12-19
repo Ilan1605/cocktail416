@@ -18,8 +18,8 @@ const cocktailImages = [
 const eventTypes = [
   "Mariage",
   "Anniversaire",
-  "Événement d'entreprise",
-  "Soirée privée",
+  "√âv√©nement d'entreprise",
+  "Soir√©e priv√©e",
   "Inauguration",
   "Gala",
   "Autre",
@@ -68,7 +68,7 @@ export default function Cocktail416Page() {
     return () => clearInterval(interval);
   }, []);
 
-  // Détection du scroll
+  // D√©tection du scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -112,11 +112,11 @@ export default function Cocktail416Page() {
         });
         setTimeout(() => setSubmitSuccess(false), 5000);
       } else {
-        alert('Une erreur est survenue. Veuillez réessayer.');
+        alert('Une erreur est survenue. Veuillez r√©essayer.');
       }
     } catch (error) {
       console.error('Erreur:', error);
-      alert('Une erreur est survenue. Veuillez réessayer.');
+      alert('Une erreur est survenue. Veuillez r√©essayer.');
     }
     
     setIsSubmitting(false);
@@ -139,7 +139,7 @@ export default function Cocktail416Page() {
           <div className="nav-links">
             <button onClick={() => scrollToSection('services')} className="nav-link">Services</button>
             <button onClick={() => scrollToSection('carte')} className="nav-link">Carte</button>
-            <button onClick={() => scrollToSection('about')} className="nav-link">À propos</button>
+            <button onClick={() => scrollToSection('about')} className="nav-link">√Ä propos</button>
             <button onClick={() => scrollToSection('devis')} className="nav-link-cta">Demander un devis</button>
           </div>
         </div>
@@ -164,14 +164,14 @@ export default function Cocktail416Page() {
         <div className="hero-content">
           <div className="hero-badge">
             <Sparkles className="w-4 h-4" />
-            <span>Bar à cocktails événementiel</span>
+            <span>Bar √† cocktails √©v√©nementiel</span>
           </div>
           <h1 className="hero-title">
             <span className="title-line">L&apos;art du cocktail</span>
-            <span className="title-line accent">à votre événement</span>
+            <span className="title-line accent">√† votre √©v√©nement</span>
           </h1>
           <p className="hero-subtitle">
-            Transformez vos événements en expériences inoubliables avec notre service de bar mobile et nos barmans professionnels.
+            Transformez vos √©v√©nements en exp√©riences inoubliables avec notre service de bar mobile et nos barmans professionnels.
           </p>
           <div className="hero-buttons">
             <button onClick={() => scrollToSection('devis')} className="btn-primary">
@@ -179,12 +179,12 @@ export default function Cocktail416Page() {
               <Send className="w-5 h-5" />
             </button>
             <button onClick={() => scrollToSection('services')} className="btn-secondary">
-              Découvrir nos services
+              D√©couvrir nos services
             </button>
           </div>
           <div className="hero-location">
             <MapPin className="w-5 h-5" />
-            <span>Genève et ses alentours</span>
+            <span>Gen√®ve et ses alentours</span>
           </div>
         </div>
 
@@ -199,9 +199,9 @@ export default function Cocktail416Page() {
         <div className="section-container">
           <div className="section-header">
             <span className="section-tag">Nos services</span>
-            <h2 className="section-title">Une expérience sur mesure</h2>
+            <h2 className="section-title">Une exp√©rience sur mesure</h2>
             <p className="section-description">
-              De la conception à la réalisation, nous nous occupons de tout pour faire de votre événement un moment exceptionnel.
+              De la conception √† la r√©alisation, nous nous occupons de tout pour faire de votre √©v√©nement un moment exceptionnel.
             </p>
           </div>
 
@@ -211,7 +211,7 @@ export default function Cocktail416Page() {
                 <Wine className="w-8 h-8" />
               </div>
               <h3>Bar Mobile</h3>
-              <p>Un ou deux bars élégants installés sur place, parfaitement adaptés à votre espace et votre thème.</p>
+              <p>Un ou deux bars √©l√©gants install√©s sur place, parfaitement adapt√©s √† votre espace et votre th√®me.</p>
             </div>
 
             <div className="service-card">
@@ -219,15 +219,15 @@ export default function Cocktail416Page() {
                 <Users className="w-8 h-8" />
               </div>
               <h3>Barmans Professionnels</h3>
-              <p>Des mixologues experts qui créent des cocktails spectaculaires et animent votre soirée avec talent.</p>
+              <p>Des mixologues experts qui cr√©ent des cocktails spectaculaires et animent votre soir√©e avec talent.</p>
             </div>
 
             <div className="service-card">
               <div className="service-icon">
                 <Calendar className="w-8 h-8" />
               </div>
-              <h3>Tous Événements</h3>
-              <p>Mariages, anniversaires, soirées d&apos;entreprise, galas... Nous nous adaptons à tous vos événements.</p>
+              <h3>Tous √âv√©nements</h3>
+              <p>Mariages, anniversaires, soir√©es d&apos;entreprise, galas... Nous nous adaptons √† tous vos √©v√©nements.</p>
             </div>
 
             <div className="service-card">
@@ -235,8 +235,8 @@ export default function Cocktail416Page() {
                 <Clock className="w-8 h-8" />
               </div>
               <h3>Service Complet</h3>
-              <p>Installation, service et démontage inclus. Vous profitez, nous nous occupons du reste.</p>
-              <div className="service-price">+2h montage/démontage incluses</div>
+              <p>Installation, service et d√©montage inclus. Vous profitez, nous nous occupons du reste.</p>
+              <div className="service-price">+2h montage/d√©montage incluses</div>
             </div>
           </div>
         </div>
@@ -247,9 +247,9 @@ export default function Cocktail416Page() {
         <div className="section-container">
           <div className="section-header">
             <span className="section-tag">Notre carte</span>
-            <h2 className="section-title">Des créations d&apos;exception</h2>
+            <h2 className="section-title">Des cr√©ations d&apos;exception</h2>
             <p className="section-description">
-              Découvrez nos cocktails signature soigneusement élaborés par nos mixologues. Classiques revisités, créations originales ou cocktails sur mesure selon vos envies.
+              D√©couvrez nos cocktails signature soigneusement √©labor√©s par nos mixologues. Classiques revisit√©s, cr√©ations originales ou cocktails sur mesure selon vos envies.
             </p>
           </div>
           
@@ -269,7 +269,7 @@ export default function Cocktail416Page() {
           <div className="carte-cta">
             <a href="/carte.pdf" target="_blank" rel="noopener noreferrer" className="btn-primary carte-btn">
               <Wine className="w-5 h-5" />
-              <span>Découvrir notre carte complète</span>
+              <span>D√©couvrir notre carte compl√®te</span>
             </a>
           </div>
         </div>
@@ -280,13 +280,13 @@ export default function Cocktail416Page() {
         <div className="section-container">
           <div className="about-grid">
             <div className="about-content">
-              <span className="section-tag">À propos</span>
+              <span className="section-tag">√Ä propos</span>
               <h2 className="section-title">L&apos;excellence genevoise</h2>
               <p>
-                Basés à Genève, nous apportons l&apos;art du cocktail directement à vos événements dans toute la région lémanique et au-delà.
+                Bas√©s √† Gen√®ve, nous apportons l&apos;art du cocktail directement √† vos √©v√©nements dans toute la r√©gion l√©manique et au-del√†.
               </p>
               <p>
-                Notre équipe de barmans passionnés transforme chaque occasion en une expérience sensorielle unique. Du classique au créatif, nous personnalisons notre carte selon vos envies et votre thème.
+                Notre √©quipe de barmans passionn√©s transforme chaque occasion en une exp√©rience sensorielle unique. Du classique au cr√©atif, nous personnalisons notre carte selon vos envies et votre th√®me.
               </p>
             </div>
             <div className="about-image">
@@ -303,23 +303,23 @@ export default function Cocktail416Page() {
           <div className="devis-grid">
             <div className="devis-info">
               <span className="section-tag">Devis gratuit</span>
-              <h2 className="section-title">Planifions votre événement</h2>
+              <h2 className="section-title">Planifions votre √©v√©nement</h2>
               <p>
-                Remplissez ce formulaire et recevez un devis personnalisé sous 24h (jours ouvrables). Notre équipe vous contactera pour affiner les détails.
+                Remplissez ce formulaire et recevez un devis personnalis√© sous 24h (jours ouvrables). Notre √©quipe vous contactera pour affiner les d√©tails.
               </p>
               
               <div className="devis-features">
                 <div className="feature">
-                  <div className="feature-icon">✓</div>
-                  <span>Réponse sous 24h (jours ouvrables)</span>
+                  <div className="feature-icon">‚úì</div>
+                  <span>R√©ponse sous 24h (jours ouvrables)</span>
                 </div>
                 <div className="feature">
-                  <div className="feature-icon">✓</div>
+                  <div className="feature-icon">‚úì</div>
                   <span>Devis sans engagement</span>
                 </div>
                 <div className="feature">
-                  <div className="feature-icon">✓</div>
-                  <span>Personnalisation complète</span>
+                  <div className="feature-icon">‚úì</div>
+                  <span>Personnalisation compl√®te</span>
                 </div>
               </div>
 
@@ -329,7 +329,7 @@ export default function Cocktail416Page() {
               {submitSuccess && (
                 <div className="success-message">
                   <Sparkles className="w-5 h-5" />
-                  <span>Votre demande a été envoyée avec succès !</span>
+                  <span>Votre demande a √©t√© envoy√©e avec succ√®s !</span>
                 </div>
               )}
 
@@ -362,7 +362,7 @@ export default function Cocktail416Page() {
 
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="phone">Téléphone *</label>
+                  <label htmlFor="phone">T√©l√©phone *</label>
                   <input
                     type="tel"
                     id="phone"
@@ -374,7 +374,7 @@ export default function Cocktail416Page() {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="eventType">Type d&apos;événement *</label>
+                  <label htmlFor="eventType">Type d&apos;√©v√©nement *</label>
                   <select
                     id="eventType"
                     name="eventType"
@@ -382,7 +382,7 @@ export default function Cocktail416Page() {
                     onChange={handleInputChange}
                     required
                   >
-                    <option value="">Sélectionnez...</option>
+                    <option value="">S√©lectionnez...</option>
                     {eventTypes.map((type) => (
                       <option key={type} value={type}>{type}</option>
                     ))}
@@ -392,7 +392,7 @@ export default function Cocktail416Page() {
 
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="eventDate">Date de l&apos;événement *</label>
+                  <label htmlFor="eventDate">Date de l&apos;√©v√©nement *</label>
                   <input
                     type="date"
                     id="eventDate"
@@ -418,7 +418,7 @@ export default function Cocktail416Page() {
 
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="guestCount">Nombre d&apos;invités *</label>
+                  <label htmlFor="guestCount">Nombre d&apos;invit√©s *</label>
                   <input
                     type="number"
                     id="guestCount"
@@ -439,7 +439,7 @@ export default function Cocktail416Page() {
                     onChange={handleInputChange}
                     required
                   >
-                    <option value="">Sélectionnez...</option>
+                    <option value="">S√©lectionnez...</option>
                     {cocktailOptions.map((option) => (
                       <option key={option} value={option}>{option} cocktails</option>
                     ))}
@@ -456,7 +456,7 @@ export default function Cocktail416Page() {
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={4}
-                  placeholder="Décrivez votre événement, vos envies, vos questions..."
+                  placeholder="D√©crivez votre √©v√©nement, vos envies, vos questions..."
                 />
               </div>
 
@@ -487,13 +487,13 @@ export default function Cocktail416Page() {
                 <span className="logo-text">COCKTAIL</span>
                 <span className="logo-number">416</span>
               </div>
-              <p>L&apos;art du cocktail à votre service. Bar mobile pour tous vos événements en Suisse romande.</p>
+              <p>L&apos;art du cocktail √† votre service. Bar mobile pour tous vos √©v√©nements en Suisse romande.</p>
             </div>
             
             <div className="footer-links">
               <h4>Navigation</h4>
               <button onClick={() => scrollToSection('services')}>Services</button>
-              <button onClick={() => scrollToSection('about')}>À propos</button>
+              <button onClick={() => scrollToSection('about')}>√Ä propos</button>
               <button onClick={() => scrollToSection('devis')}>Demander un devis</button>
             </div>
             
@@ -512,14 +512,14 @@ export default function Cocktail416Page() {
             <div className="footer-zone">
               <h4>Zone d&apos;intervention</h4>
               <div className="zone-list">
-                <span><MapPin className="w-4 h-4" /> Genève et ses alentours</span>
+                <span><MapPin className="w-4 h-4" /> Gen√®ve et ses alentours</span>
               </div>
             </div>
           </div>
           
           <div className="footer-bottom">
-            <p>© 2025 Cocktail 416. Tous droits réservés.</p>
-            <p>Conçu avec passion à Genève 🍸</p>
+            <p>¬© 2025 Cocktail 416. Tous droits r√©serv√©s.</p>
+            <p>Con√ßu avec passion √† Gen√®ve üç∏</p>
           </div>
         </div>
       </footer>
